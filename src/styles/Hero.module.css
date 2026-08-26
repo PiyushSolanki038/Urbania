@@ -5,6 +5,7 @@
   align-items: flex-end;
   overflow: hidden;
   isolation: isolate;
+  color: #f7f7f8;
 }
 
 .bgImg {

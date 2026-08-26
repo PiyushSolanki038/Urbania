@@ -3,6 +3,7 @@
   background: var(--c-bg-alt);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #f7f7f8;
 }
 
 .inner {
@@ -257,7 +258,7 @@
   color: var(--c-text-dim);
 }
 .tabActive .tabLabel {
-  color: var(--c-text);
+  color: #f7f7f8;
 }
 
 @keyframes u-panel {

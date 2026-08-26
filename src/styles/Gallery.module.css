@@ -1,5 +1,6 @@
 .section {
-  padding-block: clamp(6rem, 10vw, 8.5rem);
+  padding-top: clamp(3rem, 5vw, 4rem);
+  padding-bottom: clamp(6rem, 10vw, 8.5rem);
   scroll-margin-top: 5rem;
 }
 
@@ -8,7 +9,7 @@
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--c-red-2);
+  color: #c8102e;
 }
 .heading {
   margin-top: 1.2rem;
@@ -31,8 +32,8 @@
   break-inside: avoid;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: var(--c-bg);
+  border: 1px solid rgba(20, 20, 26, 0.1);
+  background: #ffffff;
 }
 .img {
   width: 100%;
@@ -45,7 +46,7 @@
 .scrim {
   position: absolute;
   inset: 0;
-  background: rgba(15, 15, 16, 0.4);
+  background: rgba(20, 20, 26, 0.35);
   opacity: 0;
   transition: opacity 0.5s;
 }

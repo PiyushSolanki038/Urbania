@@ -1,5 +1,5 @@
 .wrap {
-  border-block: 1px solid rgba(255, 255, 255, 0.09);
+  border-block: 1px solid rgba(20, 20, 26, 0.1);
   background: var(--c-bg);
   padding-block: clamp(1.6rem, 3vw, 2.2rem);
   overflow: hidden;
@@ -43,7 +43,7 @@
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(247, 247, 248, 0.62);
+  color: rgba(20, 20, 26, 0.6);
 }
 
 .dot {

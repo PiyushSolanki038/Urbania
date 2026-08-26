@@ -4,6 +4,7 @@
   background: var(--c-bg-alt);
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #f7f7f8;
 }
 
 .bgLayer {
@@ -177,7 +178,7 @@
   font-family: "Manrope", sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--c-text);
+  color: #f7f7f8;
 }
 
 .brochureBtn {
@@ -216,5 +217,5 @@
   transition: color 0.4s;
 }
 .quoteLink:hover {
-  color: var(--c-text);
+  color: #f7f7f8;
 }

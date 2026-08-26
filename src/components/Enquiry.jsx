@@ -43,7 +43,7 @@ export default function Enquiry() {
     setStatus("idle");
   };
 
-  const borderFor = (k) => (showErr(k) ? "#C8102E" : "rgba(255,255,255,.14)");
+  const borderFor = (k) => (showErr(k) ? "#C8102E" : "rgba(20,20,26,.15)");
   const firstName = form.name.trim().split(" ")[0] || "there";
 
   return (
@@ -137,7 +137,7 @@ export default function Enquiry() {
                       onChange={(e) => setField("state", e.target.value)}
                       onBlur={() => blur("state")}
                       className={styles.select}
-                      style={{ borderColor: borderFor("state"), color: form.state ? "#F7F7F8" : "#9B9BA1" }}
+                      style={{ borderColor: borderFor("state"), color: form.state ? "#14141A" : "#5B5B62" }}
                     >
                       <option value="">Select state</option>
                       {Object.keys(statesMap).map((s) => (
@@ -161,7 +161,7 @@ export default function Enquiry() {
                       className={styles.select}
                       style={{
                         borderColor: borderFor("city"),
-                        color: form.city ? "#F7F7F8" : "#9B9BA1",
+                        color: form.city ? "#14141A" : "#5B5B62",
                         opacity: form.state ? 1 : 0.55,
                       }}
                     >

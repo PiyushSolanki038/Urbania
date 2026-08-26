@@ -6,6 +6,10 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <div aria-hidden="true" className={styles.glowLeft} />
+      <div aria-hidden="true" className={styles.glowRight} />
+      <div aria-hidden="true" className={styles.watermark}>URBANIA</div>
+
       <div className={`u-shell ${styles.ctaRow}`}>
         <p className={styles.ctaText}>Ready to travel world-class?</p>
         <a href="#enquire" className={styles.ctaBtn}>

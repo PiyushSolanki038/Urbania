@@ -41,7 +41,7 @@ export default function Variants() {
               <div className={styles.cabin}>
                 <div className={styles.cabinLabelRow}>
                   <span className={styles.cabinLine} />
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(247,247,248,.4)" strokeWidth="1.6">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(20,20,26,.4)" strokeWidth="1.6">
                     <circle cx="12" cy="12" r="9" />
                     <path d="M12 8v4l2.5 2.5" />
                   </svg>
@@ -77,8 +77,8 @@ export default function Variants() {
                 className={styles.cta}
                 style={{
                   background: featured ? "#C8102E" : "transparent",
-                  color: featured ? "#fff" : "#F7F7F8",
-                  borderColor: featured ? "#C8102E" : "rgba(247,247,248,.28)",
+                  color: featured ? "#fff" : "#14141A",
+                  borderColor: featured ? "#C8102E" : "rgba(20,20,26,.15)",
                 }}
               >
                 Enquire about {v.code}

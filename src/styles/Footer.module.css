@@ -1,8 +1,51 @@
 .footer {
+  position: relative;
   background: var(--c-bg-alt);
+  color: #f7f7f8;
+  overflow: hidden;
+}
+
+.glowLeft {
+  position: absolute;
+  top: -20%;
+  left: -8%;
+  width: 55%;
+  height: 90%;
+  background: radial-gradient(closest-side, rgba(200, 16, 46, 0.22), transparent 72%);
+  pointer-events: none;
+}
+.glowRight {
+  position: absolute;
+  right: -6%;
+  bottom: -30%;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(closest-side, rgba(200, 16, 46, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+.watermark {
+  position: absolute;
+  inset: 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  font-size: clamp(9rem, 28vw, 26rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.02);
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  margin-left: -4rem;
+  pointer-events: none;
 }
 
 .ctaRow {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -40,6 +83,8 @@
 }
 
 .cols {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 3rem clamp(2rem, 5vw, 4rem);
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -136,7 +181,7 @@
   margin-top: 0.1rem;
 }
 .contactLink {
-  color: var(--c-text);
+  color: #f7f7f8;
   transition: color 0.4s;
 }
 .contactLink:hover {
@@ -148,6 +193,8 @@
 }
 
 .legalWrap {
+  position: relative;
+  z-index: 1;
   border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 .legal {

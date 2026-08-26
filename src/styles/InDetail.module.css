@@ -14,7 +14,7 @@
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--c-red-2);
+  color: #c8102e;
 }
 
 .heading {
@@ -30,7 +30,7 @@
   max-width: 28rem;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--c-text-dim);
+  color: #5b5b62;
 }
 
 .filmWrap {
@@ -64,7 +64,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--c-text-dimmer);
+  color: #5b5b62;
 }
 
 .filmDash {
@@ -81,11 +81,11 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-text-dim);
+  color: #5b5b62;
   transition: color 0.4s;
 }
 .filmLink:hover {
-  color: var(--c-red-2);
+  color: #c8102e;
 }
 
 .detailBlock {
@@ -126,14 +126,14 @@
   display: grid;
   place-items: center;
   border-radius: 999px;
-  border: 1px solid rgba(247, 247, 248, 0.24);
-  color: #fff;
+  border: 1px solid rgba(20, 20, 26, 0.15);
+  color: #14141a;
   transition: all 0.4s;
 }
 .navBtn:hover {
   border-color: var(--c-red);
-  color: var(--c-red-2);
-  background: rgba(200, 16, 46, 0.12);
+  color: #c8102e;
+  background: rgba(200, 16, 46, 0.1);
 }
 
 .scroller {
@@ -156,8 +156,8 @@
   position: relative;
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  border: 1px solid var(--c-border);
-  background: var(--c-panel);
+  border: 1px solid rgba(20, 20, 26, 0.1);
+  background: #ffffff;
 }
 
 .cardImg {
@@ -186,14 +186,15 @@
   font-size: 2.6rem;
   font-weight: 800;
   line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.42);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
 }
 
 .cardBody {
   position: absolute;
   inset: auto 0 0 0;
   padding: 1.5rem 1.5rem 1.7rem;
+  color: #fff;
 }
 
 .cardTag {
@@ -201,7 +202,7 @@
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--c-red-2);
+  color: #e6516a;
 }
 
 .cardTitle {

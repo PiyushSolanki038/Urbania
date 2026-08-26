@@ -35,7 +35,7 @@
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--c-text-dimmer);
+  color: var(--nav-sub, var(--c-text-dimmer));
 }
 
 .navlinks {
@@ -58,12 +58,12 @@
   font-weight: 500;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  color: rgba(247, 247, 248, 0.66);
+  color: var(--nav-link, rgba(247, 247, 248, 0.66));
   padding-block: 0.4rem;
   transition: color 0.35s;
 }
 .navlink:hover {
-  color: var(--c-text);
+  color: var(--nav-link-hover, var(--c-text));
 }
 
 .cta {
@@ -91,7 +91,7 @@
   height: 44px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--nav-burger-border, rgba(255, 255, 255, 0.16));
 }
 
 .menu {
@@ -99,6 +99,7 @@
   inset: 0;
   z-index: 70;
   background: var(--c-bg);
+  color: var(--c-text);
   transition: transform 0.6s var(--ease-out);
   transform: translateX(100%);
   pointer-events: none;
@@ -123,7 +124,7 @@
   height: 44px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(20, 20, 26, 0.16);
 }
 
 .menuNav {
@@ -136,7 +137,7 @@
   flex-direction: column;
 }
 .menuLink {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(20, 20, 26, 0.1);
   padding-block: 1.15rem;
   font-family: "Manrope";
   font-size: 1.9rem;
@@ -159,5 +160,5 @@
 .menuPhone {
   margin-top: 1.5rem;
   font-size: 0.85rem;
-  color: var(--c-text-dimmer);
+  color: #5b5b62;
 }

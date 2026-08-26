@@ -33,10 +33,16 @@ export default function Nav() {
       <header
         className={styles.header}
         style={{
-          background: scrolled ? "rgba(15,15,16,.9)" : "transparent",
-          borderBottom: `1px solid ${scrolled ? "rgba(255,255,255,.1)" : "transparent"}`,
+          background: scrolled ? "rgba(244,243,238,.9)" : "transparent",
+          borderBottom: `1px solid ${scrolled ? "rgba(20,20,26,.1)" : "transparent"}`,
           backdropFilter: scrolled ? "blur(18px)" : "none",
           WebkitBackdropFilter: scrolled ? "blur(18px)" : "none",
+          "--nav-text": scrolled ? "#14141A" : "#fff",
+          "--nav-sub": scrolled ? "#5B5B62" : "#8C8C92",
+          "--nav-link": scrolled ? "rgba(20,20,26,.66)" : "rgba(247,247,248,.66)",
+          "--nav-link-hover": scrolled ? "#C8102E" : "#F7F7F8",
+          "--nav-burger-border": scrolled ? "rgba(20,20,26,.16)" : "rgba(255,255,255,.16)",
+          color: "var(--nav-text)",
         }}
       >
         <div className={styles.bar} style={{ height: scrolled ? "64px" : "80px" }}>
