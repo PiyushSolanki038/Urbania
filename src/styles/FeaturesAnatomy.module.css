@@ -270,3 +270,33 @@
     transform: none;
   }
 }
+
+@media (max-width: 640px) {
+  .diagram {
+    min-height: 21rem;
+  }
+  .panel {
+    max-width: calc(100% - 2rem);
+    padding: 1rem 1.1rem;
+  }
+  .panelTitle {
+    font-size: 1.05rem;
+  }
+  .panelCopy {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+  .controls {
+    top: clamp(0.75rem, 3vw, 1.25rem);
+    bottom: auto;
+  }
+  .ctrlBtn {
+    width: 36px;
+    height: 36px;
+  }
+  .marker {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+}

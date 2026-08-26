@@ -6,11 +6,42 @@ import { detailCards } from "../data/site.js";
 
 export default function InDetail() {
   const trackRef = useRef(null);
+  const dragState = useRef(null);
 
   const scroll = (dir) => {
     const el = trackRef.current;
     if (!el) return;
     el.scrollBy({ left: dir * Math.max(el.clientWidth * 0.82, 260), behavior: "smooth" });
+  };
+
+  // Native overflow-x:auto only responds to touch/trackpad gestures — a
+  // plain mouse has no way to pan it. Add click-and-drag panning so desktop
+  // mouse users can move the carousel too.
+  const onPointerDown = (e) => {
+    if (e.pointerType === "touch") return;
+    const el = trackRef.current;
+    if (!el) return;
+    dragState.current = { startX: e.clientX, startScroll: el.scrollLeft, moved: false };
+    el.setPointerCapture(e.pointerId);
+  };
+  const onPointerMove = (e) => {
+    const drag = dragState.current;
+    const el = trackRef.current;
+    if (!drag || !el) return;
+    const dx = e.clientX - drag.startX;
+    if (Math.abs(dx) > 3) drag.moved = true;
+    el.scrollLeft = drag.startScroll - dx;
+  };
+  const endDrag = (e) => {
+    const el = trackRef.current;
+    if (dragState.current && el) {
+      try {
+        el.releasePointerCapture(e.pointerId);
+      } catch {
+        // pointer capture already released
+      }
+    }
+    dragState.current = null;
   };
 
   return (
@@ -65,7 +96,15 @@ export default function InDetail() {
             </div>
           </div>
 
-          <div ref={trackRef} className={`${styles.scroller} u-scroll`}>
+          <div
+            ref={trackRef}
+            className={`${styles.scroller} u-scroll`}
+            onPointerDown={onPointerDown}
+            onPointerMove={onPointerMove}
+            onPointerUp={endDrag}
+            onPointerLeave={endDrag}
+            onPointerCancel={endDrag}
+          >
             {detailCards.map((c) => (
               <article key={c.num} className={styles.card}>
                 <img src={c.image} alt={c.alt} loading="lazy" className={styles.cardImg} />

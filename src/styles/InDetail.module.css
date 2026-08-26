@@ -144,6 +144,10 @@
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
   scroll-padding-left: 0;
+  cursor: grab;
+}
+.scroller:active {
+  cursor: grabbing;
 }
 
 .card {
