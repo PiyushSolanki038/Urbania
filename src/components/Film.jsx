@@ -36,6 +36,8 @@ function KenImage({ src, start, end, focal, z, x, y, T }) {
     <img
       src={src}
       alt=""
+      loading="lazy"
+      decoding="async"
       className={styles.kenImg}
       style={{
         objectPosition: focal,
@@ -54,6 +56,8 @@ function Inset({ src, start, end, T }) {
       <img
         src={src}
         alt=""
+        loading="lazy"
+        decoding="async"
         className={styles.insetImg}
         style={{ transform: `scale(${lerp(1.14, 1.02, sstep(start, end, T))})` }}
       />
@@ -108,6 +112,8 @@ function OpeningScene({ start, end, T }) {
       <img
         src={filmOpening.bg}
         alt=""
+        loading="lazy"
+        decoding="async"
         className={styles.openingImg}
         style={{ transform: `scale(${lerp(1.14, 1.24, p)})`, opacity: sstep(start, start + 0.6, T) * out }}
       />
@@ -137,6 +143,8 @@ function CloseScene({ start, end, T }) {
       <img
         src="/assets/real-exterior-clean.jpg"
         alt=""
+        loading="lazy"
+        decoding="async"
         className={styles.closeImg}
         style={{ transform: `scale(${lerp(1.16, 1.06, p)})`, opacity: sstep(start, start + 0.55, T) }}
       />
@@ -241,14 +249,21 @@ export default function Film() {
   const op = seg("Opening");
   const clo = seg("Close");
 
+  // Each scene's own fade in/out fully resolves to opacity 0 outside its
+  // [start, end) window, so only the scene currently active needs to be
+  // mounted — this keeps the rAF-driven re-render cheap (one scene's worth
+  // of DOM/paint instead of all nine stacked scenes every frame).
+  const active = (start, end) => T >= start - 0.02 && T < end + 0.02;
+
   return (
     <div ref={containerRef} className={styles.stage}>
-      <OpeningScene start={op[0]} end={op[1]} T={T} />
+      {active(op[0], op[1]) && <OpeningScene start={op[0]} end={op[1]} T={T} />}
       {filmStandardScenes.map((d) => {
         const s = seg(d.name);
+        if (!active(s[0], s[1])) return null;
         return <SceneBlock key={d.name} d={d} start={s[0]} end={s[1]} T={T} />;
       })}
-      <CloseScene start={clo[0]} end={clo[1]} T={T} />
+      {active(clo[0], clo[1]) && <CloseScene start={clo[0]} end={clo[1]} T={T} />}
       <Persistent T={T} />
     </div>
   );

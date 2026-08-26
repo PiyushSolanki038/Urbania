@@ -9,6 +9,8 @@ export default function Hero() {
         src="/assets/real-hero.jpg"
         alt="Force Motors Urbania parked at dusk beside a modern building with business travellers boarding"
         className={styles.bgImg}
+        fetchPriority="high"
+        decoding="async"
       />
       <div className={styles.scrim} />
 

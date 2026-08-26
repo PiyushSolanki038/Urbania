@@ -67,6 +67,8 @@ export default function FeaturesAnatomy() {
                 src="/assets/urbania-exploded.png"
                 alt="Exploded view of the Force Motors Urbania showing engine, cockpit, seats, glass, doors and chassis"
                 className={styles.diagramImg}
+                loading="lazy"
+                decoding="async"
               />
 
               <div
