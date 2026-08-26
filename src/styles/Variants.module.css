@@ -1,0 +1,210 @@
+.section {
+  padding-block: clamp(6rem, 10vw, 8.5rem);
+  scroll-margin-top: 5rem;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-red-2);
+}
+.heading {
+  margin-top: 1.2rem;
+  max-width: 20ch;
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  line-height: 1.02;
+  font-weight: 800;
+}
+
+.grid {
+  margin-top: 3.4rem;
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--c-panel);
+  padding: 1.9rem 1.9rem 2rem;
+  transition: transform 0.9s var(--ease-out), border-color 0.5s, box-shadow 0.5s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 16, 46, 0.6);
+  box-shadow: 0 30px 70px -28px rgba(0, 0, 0, 0.8);
+}
+.cardFeatured {
+  border-color: rgba(200, 16, 46, 0.55);
+  background: linear-gradient(180deg, rgba(200, 16, 46, 0.1), #141416 60%);
+}
+
+.topbar {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: transparent;
+}
+.cardFeatured .topbar {
+  background: var(--c-red);
+}
+
+.badge {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  background: var(--c-red);
+  color: #fff;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.tag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--c-text-dimmer);
+}
+.name {
+  margin-top: 0.7rem;
+  font-family: "Manrope";
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.seatsRow {
+  margin-top: 1.6rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+.seatsValue {
+  font-family: "Manrope";
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.04em;
+  color: var(--c-text);
+}
+.seatsLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-text-dimmer);
+  padding-bottom: 0.55rem;
+}
+
+.cabin {
+  margin-top: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--c-bg-alt);
+  padding: 1.3rem 1.3rem 1.5rem;
+}
+.cabinLabelRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding-bottom: 1rem;
+}
+.cabinLine {
+  height: 1px;
+  flex: 1;
+  background: rgba(247, 247, 248, 0.12);
+}
+.cabinLabel {
+  font-size: 0.5625rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(247, 247, 248, 0.34);
+}
+.rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+.row {
+  display: flex;
+  gap: 0.32rem;
+}
+.seat {
+  width: 17px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.wheelbaseBlock {
+  margin-top: 1.6rem;
+}
+.wheelbaseRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+}
+.wheelbaseValue {
+  color: var(--c-text);
+}
+.lenTrack {
+  margin-top: 0.6rem;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.lenBar {
+  height: 100%;
+  background: linear-gradient(90deg, #7a0a1c, #c8102e);
+  border-radius: 99px;
+}
+.lenNote {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--c-text-dimmer);
+}
+
+.note {
+  margin-top: 1.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+}
+
+.cta {
+  margin-top: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 50px;
+  border: 1px solid;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+.cta:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}

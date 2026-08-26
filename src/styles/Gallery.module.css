@@ -1,0 +1,136 @@
+.section {
+  padding-block: clamp(6rem, 10vw, 8.5rem);
+  scroll-margin-top: 5rem;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-red-2);
+}
+.heading {
+  margin-top: 1.2rem;
+  max-width: 20ch;
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  line-height: 1.02;
+  font-weight: 800;
+}
+
+.grid {
+  margin-top: 3rem;
+  columns: 300px;
+  column-gap: 1rem;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--c-bg);
+}
+.img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s var(--ease-out);
+}
+.item:hover .img {
+  transform: scale(1.06);
+}
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 16, 0.4);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.item:hover .scrim {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 12, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  animation: u-panel 0.3s ease both;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #fff;
+  transition: border-color 0.4s;
+}
+.closeBtn:hover {
+  border-color: var(--c-red);
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: border-color 0.4s;
+}
+.navBtn:hover {
+  border-color: var(--c-red);
+}
+.navPrev {
+  left: 1.5rem;
+}
+.navNext {
+  right: 1.5rem;
+}
+
+.figure {
+  max-width: 64rem;
+  max-height: 86vh;
+}
+.figureImg {
+  max-height: 78vh;
+  width: 100%;
+  object-fit: contain;
+}
+.caption {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+}
+
+@keyframes u-panel {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

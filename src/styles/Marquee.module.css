@@ -1,0 +1,44 @@
+.wrap {
+  border-block: 1px solid rgba(255, 255, 255, 0.09);
+  background: var(--c-bg);
+  padding-block: clamp(1.6rem, 3vw, 2.2rem);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 3.5rem;
+  white-space: nowrap;
+  animation: u-marq 42s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.text {
+  font-family: "Manrope";
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(247, 247, 248, 0.62);
+}
+
+.dot {
+  width: 1px;
+  height: 1rem;
+  background: rgba(200, 16, 46, 0.5);
+}

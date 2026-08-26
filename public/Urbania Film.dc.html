@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>window.OM_SCENES = '[{"name":"Opening","dur":3.6,"desc":"Hero fades up with the URBANIA wordmark and tagline"},{"name":"Presence","dur":4,"desc":"Front-end tour: signature grille and LED headlamps"},{"name":"Cabin","dur":4.4,"desc":"Interior cabin and captain seats with comfort callouts"},{"name":"Cockpit","dur":4,"desc":"Dashboard, touchscreen and digital cluster callouts"},{"name":"Strength","dur":4,"desc":"Monocoque body and wheel with safety callouts"},{"name":"Journeys","dur":4,"desc":"Lifestyle shots — business, tourism and family"},{"name":"Close","dur":4.6,"desc":"Price, call-to-action and wordmark sign-off"}]';</script>
+<script>window.OM_PLAYBACK = '{"mode":"loop"}';</script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#08080A;color:#F7F7F8;font-family:'Inter',system-ui,sans-serif}
+</style>
+</helmet>
+<div style="width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#08080A;padding:1.5rem">
+  <div style="width:100%;max-width:1280px;aspect-ratio:16/9;background:#08080A">
+    <x-import component-from-global-scope="UrbaniaFilm" from="./animations-v3.jsx ./urbania-film.js" hint-size="100%,100%"></x-import>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      scenes: window.OM_SCENES,
+      playback: window.OM_PLAYBACK,
+    };
+  }
+}
+</script>
+</body>
+</html>

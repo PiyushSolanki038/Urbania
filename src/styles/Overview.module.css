@@ -1,0 +1,167 @@
+.section {
+  position: relative;
+  background: var(--c-bg-alt);
+  scroll-margin-top: 5rem;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.glowSpot {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 60%;
+  height: 70%;
+  background: radial-gradient(closest-side, rgba(200, 16, 46, 0.14), transparent 72%);
+}
+
+.inner {
+  position: relative;
+  padding-block: clamp(6rem, 10vw, 8.5rem);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: center;
+}
+
+.copy {
+  max-width: 34rem;
+}
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-red-2);
+}
+.heading {
+  margin-top: 1.2rem;
+  font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+  line-height: 1;
+  font-weight: 800;
+}
+.lede {
+  margin-top: 1.8rem;
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--c-text-dim);
+}
+
+.pillars {
+  margin-top: 2.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem 2rem;
+  list-style: none;
+}
+.pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.pillarNum {
+  font-family: "Manrope";
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(247, 247, 248, 0.32);
+}
+.pillarLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text);
+}
+
+.imageWrap {
+  position: relative;
+}
+.imageGlow {
+  position: absolute;
+  inset: 8% 4%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.06), transparent 70%);
+  filter: blur(20px);
+}
+.image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, 0.6));
+}
+
+.cards {
+  margin-top: clamp(3.5rem, 6vw, 6rem);
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--c-panel);
+  transition: transform 0.9s var(--ease-out), border-color 0.5s, box-shadow 0.5s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 16, 46, 0.5);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.75);
+}
+
+.cardImgWrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(45%) contrast(1.08);
+}
+.cardImgScrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--c-panel), rgba(27, 27, 30, 0.1) 55%, transparent);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem 1.9rem 2.1rem;
+}
+.cardTag {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-red-2);
+}
+.cardTitle {
+  margin-top: 1rem;
+  font-family: "Manrope";
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.cardBodyText {
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--c-text-dim);
+}
