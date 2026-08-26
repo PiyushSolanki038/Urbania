@@ -1,16 +1,9 @@
 .section {
   position: relative;
-  --c-bg-alt: #f5f3f0;
-  --c-panel: #ffffff;
-  --c-text: #15151a;
-  --c-text-dim: #55555c;
-  --c-text-dimmer: #6b6b72;
-  --c-text-faint: #83838a;
   scroll-margin-top: 5rem;
   background: var(--c-bg-alt);
-  color: var(--c-text);
   overflow: hidden;
-  border-top: 1px solid rgba(21, 21, 26, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .bgLayer {
@@ -41,7 +34,7 @@
   font-weight: 800;
   font-size: clamp(9rem, 28vw, 26rem);
   line-height: 1;
-  color: rgba(21, 21, 26, 0.035);
+  color: rgba(255, 255, 255, 0.02);
   text-transform: uppercase;
   letter-spacing: -0.05em;
   white-space: nowrap;
@@ -68,7 +61,7 @@
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--c-red);
+  color: var(--c-red-2);
 }
 .dash {
   width: 26px;
@@ -95,7 +88,7 @@
   line-height: 0.82;
   font-weight: 800;
   letter-spacing: -0.04em;
-  background: linear-gradient(180deg, #15151a 0%, #45454c 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #c9c9ce 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -128,7 +121,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #55555c;
+  color: #b7b7bc;
 }
 
 .disclaimer {
