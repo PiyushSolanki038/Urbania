@@ -1,19 +1,6 @@
 .section {
   position: relative;
-  --c-bg-alt: #efeae2;
-  --c-panel: #ffffff;
-  --c-text: #1c1a17;
-  --c-text-dim: #514e48;
-  --c-text-dimmer: #6b6760;
-  --c-text-faint: #837e76;
-  background: linear-gradient(
-    180deg,
-    #0f0f10 0%,
-    var(--c-bg-alt) 7rem,
-    var(--c-bg-alt) calc(100% - 7rem),
-    #0f0f10 100%
-  );
-  color: var(--c-text);
+  background: var(--c-bg-alt);
   scroll-margin-top: 5rem;
   overflow: hidden;
 }
@@ -53,7 +40,7 @@
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--c-red);
+  color: var(--c-red-2);
 }
 .heading {
   margin-top: 1.2rem;
@@ -71,7 +58,7 @@
 
 .pillars {
   margin-top: 2.6rem;
-  border-top: 1px solid rgba(28, 26, 23, 0.14);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 1.8rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -88,7 +75,7 @@
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.2em;
-  color: rgba(28, 26, 23, 0.4);
+  color: rgba(247, 247, 248, 0.32);
 }
 .pillarLabel {
   font-size: 0.72rem;
@@ -125,15 +112,14 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid rgba(28, 26, 23, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: var(--c-panel);
-  box-shadow: 0 1px 2px rgba(28, 26, 23, 0.05);
   transition: transform 0.9s var(--ease-out), border-color 0.5s, box-shadow 0.5s;
 }
 .card:hover {
   transform: translateY(-6px);
   border-color: rgba(200, 16, 46, 0.5);
-  box-shadow: 0 24px 60px -24px rgba(28, 26, 23, 0.35);
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.75);
 }
 
 .cardImgWrap {
@@ -164,7 +150,7 @@
   font-weight: 600;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--c-red);
+  color: var(--c-red-2);
 }
 .cardTitle {
   margin-top: 1rem;
