@@ -43,7 +43,7 @@
 }
 .cardFeatured {
   border-color: rgba(200, 16, 46, 0.55);
-  background: linear-gradient(180deg, rgba(200, 16, 46, 0.08), #ffffff 60%);
+  background: linear-gradient(180deg, rgba(200, 16, 46, 0.05), #ffffff 30%);
 }
 
 .topbar {
