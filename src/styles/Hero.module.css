@@ -167,7 +167,21 @@
   top: 0;
   height: 22px;
   background: var(--c-red);
-  animation: u-hint 2.2s var(--ease-out) infinite;
+  animation: hint 2.2s var(--ease-out) infinite;
+}
+
+@keyframes hint {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
